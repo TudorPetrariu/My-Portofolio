@@ -1,0 +1,14 @@
+{
+	"name": "my-portofolio",
+	"version": "1.0.0",
+	"description": "My-portofolio",
+	"main": "index.js",
+	"scripts": {
+		"sass": "node-sass -w scss/ -o dist/css/ --recursive"
+	},
+	"author": "Tudor Petrariu",
+	"license": "MIT",
+	"dependencies": {
+		"node-sass": "^4.13.0"
+	}
+}
