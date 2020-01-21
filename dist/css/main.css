@@ -96,6 +96,8 @@
   box-sizing: border-box; }
 
 body {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-family: 'Ubuntu', sans-serif;
   background: #141e30;
   background: -webkit-linear-gradient(to right, #243b55, #141e30);
   background: linear-gradient(to right, #253447, #141e30);
@@ -103,7 +105,6 @@ body {
   margin: 0;
   color: #fff;
   line-height: 1.5;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   z-index: 1; }
   body#bg-img {
     background: url("/dist/Assets/background.jpg");
@@ -127,7 +128,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 4rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -212,18 +213,16 @@ main {
     align-items: center;
     font-size: 3.5em; }
 
-.animated {
-  transition: all 0.5s ease-out; }
-
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 10em; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
+    border-radius: 50px;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
@@ -239,7 +238,7 @@ main {
   justify-content: center; }
 
 .card img {
-  height: 12em; }
+  padding: .2em; }
 
 .card .card-content span {
   color: #d49f4b; }
@@ -253,6 +252,7 @@ main {
   color: #253447; }
   .card .card-action a:hover,
   .card .card-action i:hover {
+    transition: all 0.5s ease-out;
     color: #d49f4b; }
 
 #main-footer {
@@ -263,15 +263,28 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
-  #projects h1,
+  #projects .card-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em; }
+  #projects .skills {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2em; }
+  #projects h1 {
+    font-size: 3em; }
   #projects h2 {
-    font-size: 2.5em; }
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    font-size: 2em;
+    margin-bottom: 5%; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr); }
+  #projects .card-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em; }
+  #projects .skills {
+    display: flex;
+    justify-content: flex-start; }
   .resume {
     padding: .5rem; }
     .resume h1 {
@@ -280,11 +293,26 @@ main {
       .resume h1 span {
         padding: .2em; }
     .resume img {
-      padding: .5rem;
+      padding: .1rem;
       width: 80vw;
       height: 85vh; } }
 
 @media screen and (max-width: 768px) {
+  #projects .card-title {
+    display: flex;
+    font-size: 1.2em; }
+  #projects .skills {
+    display: flex;
+    justify-content: flex-start; }
+  #projects .card-action {
+    display: flex;
+    justify-content: center; }
+    #projects .card-action i {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+  #projects .skills {
+    font-size: .9em; }
   .resume h1 {
     margin-top: 0;
     font-size: 3em;
@@ -320,27 +348,34 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
+  #projects h1 {
+    font-size: 2em; }
+  #projects h2 {
+    font-size: 1.5em; }
+  #projects .card-title {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  #projects .skills {
+    display: flex;
+    justify-content: flex-start; }
+  #projects .card-action {
+    display: flex;
+    text-align: center;
+    flex-direction: row-reverse;
+    align-items: center; }
+    #projects .card-action i {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
   #home h1 {
     font-size: 3.5em; }
   #about h1 {
-    font-size: 1.5em; }
-  #projects .card {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    margin-left: -10%; }
-  #projects h1 {
-    font-size: 1.5em;
-    line-height: 0.2;
-    flex-flow: row; }
-    #projects h1 span {
-      padding: .2em; }
-  #projects h2 {
     font-size: 1.5em; }
   .resume h1 {
     font-size: 1.5em;
