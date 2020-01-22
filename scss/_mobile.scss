@@ -1,5 +1,11 @@
 // Widescreens
 @include mediaXL {
+	.about-info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: flex-start;
+		font-size: 1.5em;
+	}
 	#projects {
 		.card-title {
 			display: flex;
@@ -23,6 +29,10 @@
 
 //desktops & laptops
 @include mediaLg {
+	.about-info {
+		display: flex;
+		flex-direction: column;
+	}
 	#projects {
 		.card-title {
 			display: flex;
@@ -55,10 +65,17 @@
 
 // Tablets & small laptops
 @include mediaMd {
+	#about {
+		h1 {
+			font-size: 3em;
+		}
+	}
 	#projects {
 		.card-title {
 			display: flex;
 			font-size: 1.2em;
+			justify-content: space-between;
+			// align-items: flex-start;
 		}
 		.skills {
 			display: flex;
@@ -138,6 +155,21 @@
 
 //Smartphone
 @include mediaSm {
+	#contact {
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+		.boxes {
+			margin-top: 50%;
+			div {
+				font-size: 1em;
+				padding: 1em;
+			}
+		}
+	}
 	#projects {
 		h1 {
 			font-size: 2em;
@@ -175,7 +207,7 @@
 		}
 	}
 	#about h1 {
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 
 	.resume {

@@ -39,7 +39,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	opacity: 0.95;
+	opacity: .98;
 
 	visibility: hidden;
 	&.show {
@@ -77,16 +77,22 @@
 		@include easeOut;
 		transform: translate3d(0, 100%, 0);
 		&.show {
+			.animated {
+				// animation-duration: 1s;
+				// animation-delay: .2s;
+				// animation-iteration-count: infinite;
+			}
 			//slide in from top
 			transform: translate3d(0, 0, 0);
 		}
 
 		.portrait {
 			img {
-				width: 250px;
-				height: 250px;
+				width: 200px;
+				height: 200px;
 				border-radius: 50%;
-				border: solid 3px $secondary-color;
+				border: solid 3px white;
+				background-color: ligthen($primary-color, 5);
 			}
 		}
 	}
@@ -110,7 +116,6 @@
 		padding: 1rem 0;
 		font-weight: 300;
 		color: set-text-color($primary-color);
-
 		text-decoration: none;
 		@include easeOut;
 		&:hover {

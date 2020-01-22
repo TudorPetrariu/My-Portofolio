@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.95;
+  opacity: .98;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -53,10 +53,11 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait img {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      border: solid 3px #d49f4b; }
+      border: solid 3px white;
+      background-color: ligthen(#253447, 5); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -179,25 +180,6 @@ main {
   width: 200px;
   height: 200px; }
 
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem; }
-
-.job-1 {
-  grid-area: job1; }
-
-.job-2 {
-  grid-area: job2; }
-
-.job-3 {
-  grid-area: job3; }
-
-.job {
-  background: ligthen(#253447, 5);
-  background: #253447;
-  padding: 0.5rem;
-  border-bottom: #d49f4b 5px solid; }
-
 .resume {
   display: flex;
   justify-content: space-around;
@@ -255,6 +237,21 @@ main {
     transition: all 0.5s ease-out;
     color: #d49f4b; }
 
+.animated:nth-child(1) {
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  transition: all 0.5s ease-out; }
+
+.animated:nth-child(2) {
+  animation-delay: 0.6s;
+  animation-duration: 2s;
+  transition: all 0.5s ease-out; }
+
+.animated:nth-child(3) {
+  animation-delay: 0.9s;
+  animation-duration: 3s;
+  transition: all 0.5s ease-out; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -263,6 +260,11 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  .about-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    font-size: 1.5em; }
   #projects .card-title {
     display: flex;
     justify-content: space-between;
@@ -278,6 +280,9 @@ main {
     margin-bottom: 5%; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .about-info {
+    display: flex;
+    flex-direction: column; }
   #projects .card-title {
     display: flex;
     justify-content: space-between;
@@ -298,9 +303,12 @@ main {
       height: 85vh; } }
 
 @media screen and (max-width: 768px) {
+  #about h1 {
+    font-size: 3em; }
   #projects .card-title {
     display: flex;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    justify-content: space-between; }
   #projects .skills {
     display: flex;
     justify-content: flex-start; }
@@ -351,6 +359,15 @@ main {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
+  #contact h1 {
+    font-size: 2em; }
+  #contact h2 {
+    font-size: 1.2em; }
+  #contact .boxes {
+    margin-top: 50%; }
+    #contact .boxes div {
+      font-size: 1em;
+      padding: 1em; }
   #projects h1 {
     font-size: 2em; }
   #projects h2 {
@@ -376,7 +393,7 @@ main {
   #home h1 {
     font-size: 3.5em; }
   #about h1 {
-    font-size: 1.5em; }
+    font-size: 2em; }
   .resume h1 {
     font-size: 1.5em;
     line-height: 0.2;

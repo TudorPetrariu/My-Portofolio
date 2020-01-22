@@ -83,26 +83,7 @@ main {
 	width: 200px;
 	height: 200px;
 }
-.bio {
-	grid-area: bio;
-	font-size: 1.5rem;
-}
-.job-1 {
-	grid-area: job1;
-}
-.job-2 {
-	grid-area: job2;
-}
-.job-3 {
-	grid-area: job3;
-}
-
-.job {
-	background: ligthen($primary-color, 5);
-	background: $primary-color;
-	padding: 0.5rem;
-	border-bottom: $secondary-color 5px solid;
-}
+//
 
 ////Resume
 
@@ -179,6 +160,14 @@ main {
 				color: $secondary-color;
 			}
 		}
+	}
+}
+
+@for $x from 1 through 3 {
+	.animated:nth-child(#{$x}) {
+		animation-delay: $x *0.3s;
+		animation-duration: $x *1s;
+		@include easeOut;
 	}
 }
 
