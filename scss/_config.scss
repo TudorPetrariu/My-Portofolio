@@ -1,7 +1,5 @@
 $primary-color: #253447;
-
 $secondary-color: #d49f4b;
-
 $home-image-show: true;
 $home-image: url('/dist/Assets/background.jpg');
 $background-opacity: 0.6;
@@ -25,7 +23,6 @@ $background-opacity: 0.6;
 		}
 	}
 }
-///set text color
 @function set-text-color($color) {
 	@if (lightness($color) > 40) {
 		@return #000;
@@ -44,7 +41,6 @@ $background-opacity: 0.6;
 	background: linear-gradient(to right, #253447, #141e30);
 }
 
-//Media Query
 @mixin mediaSm {
 	@media screen and (max-width: 500px) {
 		@content;
