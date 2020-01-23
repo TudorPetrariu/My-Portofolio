@@ -3,12 +3,15 @@
 	"version": "1.0.0",
 	"description": "My-portofolio",
 	"main": "index.js",
+	"homepage": "https://tudorpetrariu.github.io/My-Portofolio",
 	"scripts": {
-		"sass": "node-sass -w scss/ -o dist/css/ --recursive"
+		"sass": "node-sass -w scss/ -o dist/css/ --recursive",
+		"deploy": "gh-pages -d dist"
 	},
 	"author": "Tudor Petrariu",
 	"license": "MIT",
 	"dependencies": {
-		"node-sass": "^4.13.0"
+		"gh-pages": "^2.2.0",
+		"node-sass": "^4.13.1"
 	}
 }
