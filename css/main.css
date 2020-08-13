@@ -115,8 +115,8 @@
 
 body {
   background: url("../dist/Assets/background.jpg");
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: "Ubuntu", sans-serif;
   background: #141e30;
   background: -webkit-linear-gradient(to right, #243b55, #141e30);
   background: linear-gradient(to right, #253447, #141e30);
@@ -208,7 +208,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info p {
     transition: all 0.5s ease-out; }
@@ -227,8 +227,7 @@ main {
   flex-wrap: wrap;
   align-items: center; }
   .resume img {
-    width: 40vw;
-    height: 90vh;
+    height: 85vh;
     border: solid 3px #d49f4b; }
   .resume h1 {
     display: flex;
@@ -261,7 +260,7 @@ main {
   justify-content: center; }
 
 .card img {
-  padding: .2em; }
+  padding: 0.2em; }
 
 .card .card-content span {
   color: #d49f4b; }
