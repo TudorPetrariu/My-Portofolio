@@ -121,6 +121,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   p {
     @include easeOut;
+    line-height: 2.5;
   }
 }
 .bio-image {

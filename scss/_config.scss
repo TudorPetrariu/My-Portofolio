@@ -1,63 +1,63 @@
 $primary-color: #253447;
 $secondary-color: #d49f4b;
 $home-image-show: true;
-$home-image: url('/My-Portofolio/Assets/background.jpg');
+$home-image: url("/My-Portofolio/Assets/background.jpg");
 $background-opacity: 0.6;
 
 @mixin background {
-	@if $home-image-show {
-		&#bg-img {
-			background: $home-image;
-			background-attachment: fixed;
-			background-size: cover;
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-				z-index: -1;
-				background: rgba($primary-color, $background-opacity);
-			}
-		}
-	}
+  @if $home-image-show {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
 }
 @function set-text-color($color) {
-	@if (lightness($color) > 40) {
-		@return #000;
-	} @else {
-		@return #fff;
-	}
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
 }
 
 @mixin easeOut {
-	transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @mixin main-color {
-	background: #141e30;
-	background: -webkit-linear-gradient(to right, #243b55, #141e30);
-	background: linear-gradient(to right, #253447, #141e30);
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #253447, #141e30);
 }
 
 @mixin mediaSm {
-	@media screen and (max-width: 500px) {
-		@content;
-	}
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 @mixin mediaMd {
-	@media screen and (max-width: 768px) {
-		@content;
-	}
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 @mixin mediaLg {
-	@media screen and (min-width: 769px) and (max-width: 1170px) {
-		@content;
-	}
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 @mixin mediaXL {
-	@media screen and (min-width: 1171px) {
-		@content;
-	}
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }
