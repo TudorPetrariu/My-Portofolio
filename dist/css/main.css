@@ -223,12 +223,12 @@ main {
 
 .resume {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center; }
-  .resume img {
-    height: 85vh;
-    border: solid 3px #d49f4b; }
+  .resume .resume-image {
+    height: 80vh;
+    width: 30vw; }
   .resume h1 {
     display: flex;
     flex-direction: column;

@@ -137,12 +137,12 @@ main {
 
 .resume {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  img {
-    height: 85vh;
-    border: solid 3px $secondary-color;
+  .resume-image {
+    height: 80vh;
+    width: 30vw;
   }
   h1 {
     display: flex;
