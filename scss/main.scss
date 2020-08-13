@@ -1,227 +1,226 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 
 ::-webkit-scrollbar {
-	width: 10px;
-	&-track {
-		box-shadow: inset 0 0 5px rgb(0, 0, 0);
-		border-radius: 10px;
-		border-bottom-style: hidden;
-	}
+  width: 10px;
+  &-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    border-bottom-style: hidden;
+  }
 
-	&-thumb {
-		background: $secondary-color;
-		border-radius: 10px;
-		border-bottom-style: hidden;
+  &-thumb {
+    background: $secondary-color;
+    border-radius: 10px;
+    border-bottom-style: hidden;
 
-		&:hover {
-			background: darken($secondary-color, 5);
-		}
-	}
+    &:hover {
+      background: darken($secondary-color, 5);
+    }
+  }
 }
 .card-reveal span {
-	color: $secondary-color;
-	font-weight: 900;
+  color: $secondary-color;
+  font-weight: 900;
 }
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-	background: url('../dist/Assets/background.jpg');
-	font-family: 'ZCOOL QingKe HuangYou', cursive;
-	font-family: 'Ubuntu', sans-serif;
-	@include background;
-	@include main-color;
-	height: 100%;
-	margin: 0;
-	color: set-text-color($primary-color);
-	line-height: 1.5;
-	z-index: 1;
+  background: url("../dist/Assets/background.jpg");
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-family: "Ubuntu", sans-serif;
+  @include background;
+  @include main-color;
+  height: 100%;
+  margin: 0;
+  color: set-text-color($primary-color);
+  line-height: 1.5;
+  z-index: 1;
 }
 
 // /Headings
 h1,
 h2,
 h3 {
-	margin: 0;
-	font-weight: 400;
-	&.lg-heading {
-		font-size: 5rem;
-	}
-	&.sm-heading {
-		margin-bottom: 2rem;
-		padding: 0.2rem 1rem;
-		background: rgba(lighten($primary-color, 2), 0.5);
-		font-size: 2rem;
-		border-radius: 10px;
-	}
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading {
+    font-size: 5rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    font-size: 2rem;
+    border-radius: 10px;
+  }
 }
 a {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 header {
-	position: fixed;
-	z-index: 2;
-	width: 100%;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 .text-secondary {
-	color: $secondary-color;
+  color: $secondary-color;
 }
 
 main {
-	padding: 4rem;
-	// height: 100%;
-	min-height: calc(100vh - 60px);
-	.icons {
-		margin-top: 1rem;
-		a {
-			padding: 0.4rem;
-			&:hover {
-				color: $secondary-color;
-				@include easeOut;
-			}
-		}
-	}
-	hr {
-		border-style: none;
-		border-top: 4px dotted;
-		width: 50%;
-		margin: auto;
-	}
-	&#home {
-		.stacks,
-		.icons {
-			font-size: 1.3em;
-			background: rgba(lighten($primary-color, 2), 0.5);
-			color: white;
-			margin: auto;
-			border-radius: 10px;
-			width: 75%;
-			text-align: center;
-			padding: 1em;
-			:hover {
-				color: $secondary-color;
-			}
-		}
-		overflow: hidden;
-		h1 {
-			margin-top: 20vh;
-			text-align: center;
-		}
-		h2 {
-			text-align: center;
-		}
-	}
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+  hr {
+    border-style: none;
+    border-top: 4px dotted;
+    width: 50%;
+    margin: auto;
+  }
+  &#home {
+    .stacks,
+    .icons {
+      font-size: 1.3em;
+      background: rgba(lighten($primary-color, 2), 0.5);
+      color: white;
+      margin: auto;
+      border-radius: 10px;
+      width: 75%;
+      text-align: center;
+      padding: 1em;
+      :hover {
+        color: $secondary-color;
+      }
+    }
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
 }
 .about-info {
-	display: grid;
-	grid-gap: 30px;
-	grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-	grid-template-columns: repeat(3, 1fr);
-	p {
-		@include easeOut;
-	}
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  p {
+    @include easeOut;
+  }
 }
 .bio-image {
-	grid-area: bioimage;
-	margin: auto;
-	border-radius: 50%;
-	border: $secondary-color 3px solid;
-	width: 200px;
-	height: 200px;
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: $secondary-color 3px solid;
+  width: 200px;
+  height: 200px;
 }
 //
 
 ////Resume
 
 .resume {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	align-items: center;
-	img {
-		width: 40vw;
-		height: 90vh;
-		border: solid 3px $secondary-color;
-	}
-	h1 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 3.5em;
-	}
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  img {
+    height: 85vh;
+    border: solid 3px $secondary-color;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5em;
+  }
 }
 
 .boxes {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 10em;
-	div {
-		font-size: 2rem;
-		border: 3px #fff solid;
-		border-radius: 50px;
-		padding: 1.5rem 2.5rem;
-		margin-bottom: 3rem;
-		@include easeOut;
-		&:hover {
-			padding: 0.5rem 1.5rem;
-			background-color: $secondary-color;
-			color: set-text-color($secondary-color);
-			span {
-				color: set-text-color($secondary-color);
-			}
-		}
-	}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10em;
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    border-radius: 50px;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background-color: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
 }
 
 .card {
-	.skills {
-		display: flex;
-		justify-content: center;
-	}
-	img {
-		padding: .2em;
-	}
+  .skills {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    padding: 0.2em;
+  }
 
-	.card-content span {
-		color: $secondary-color;
-	}
-	.card-reveal {
-		p {
-			color: $secondary-color;
-			color: set-text-color($secondary-color);
-		}
-	}
-	.card-action {
-		a,
-		i {
-			color: $primary-color;
+  .card-content span {
+    color: $secondary-color;
+  }
+  .card-reveal {
+    p {
+      color: $secondary-color;
+      color: set-text-color($secondary-color);
+    }
+  }
+  .card-action {
+    a,
+    i {
+      color: $primary-color;
 
-			&:hover {
-				@include easeOut;
+      &:hover {
+        @include easeOut;
 
-				color: $secondary-color;
-			}
-		}
-	}
+        color: $secondary-color;
+      }
+    }
+  }
 }
 
 @for $x from 1 through 3 {
-	.animated:nth-child(#{$x}) {
-		animation-delay: $x *0.3s;
-		animation-duration: $x *1s;
-		@include easeOut;
-	}
+  .animated:nth-child(#{$x}) {
+    animation-delay: $x * 0.3s;
+    animation-duration: $x * 1s;
+    @include easeOut;
+  }
 }
 
 #main-footer {
-	text-align: center;
-	padding: 1rem;
-	background: darken($primary-color, 10);
-	color: set-text-color($primary-color);
-	height: 60px;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
 }
-@import 'mobile';
+@import "mobile";
