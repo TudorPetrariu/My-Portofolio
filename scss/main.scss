@@ -177,12 +177,13 @@ main {
 }
 
 .card {
+  max-width: 35rem;
+  img {
+    height: 25rem;
+  }
   .skills {
     display: flex;
     justify-content: center;
-  }
-  img {
-    padding: 0.2em;
   }
 
   .card-content span {

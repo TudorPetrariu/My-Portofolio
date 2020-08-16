@@ -1,240 +1,246 @@
 @include mediaXL {
-	.about-info {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		justify-content: flex-start;
-		font-size: 1.5em;
-	}
-	#projects {
-		.card-title {
-			display: flex;
-			justify-content: space-between;
-			font-size: 1.4em;
-		}
-		.skills {
-			display: flex;
-			justify-content: flex-start;
-			font-size: 1.2em;
-		}
-		h1 {
-			font-size: 4em;
-		}
-		h2 {
-			margin-bottom: 5%;
-		}
-	}
+  .about-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    font-size: 1.5em;
+  }
+  #projects {
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4em;
+    }
+    .skills {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.2em;
+    }
+    h1 {
+      font-size: 4em;
+    }
+    h2 {
+      margin-bottom: 5%;
+    }
+  }
 }
 
 @include mediaLg {
-	.about-info {
-		display: flex;
-		flex-direction: column;
-	}
-	#projects {
-		.card-title {
-			display: flex;
-			justify-content: space-between;
-			font-size: 1.2em;
-		}
-		.skills {
-			display: flex;
-			justify-content: flex-start;
-		}
-	}
-	.resume {
-		padding: .5rem;
+  .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+  #projects {
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2em;
+    }
+    .skills {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  .resume {
+    padding: 0.5rem;
 
-		h1 {
-			font-size: 2rem;
+    h1 {
+      font-size: 2rem;
 
-			flex-flow: row;
-			span {
-				padding: .2em;
-			}
-		}
-		img {
-			padding: .1rem;
-			width: 80vw;
-			height: 85vh;
-		}
-	}
+      flex-flow: row;
+      span {
+        padding: 0.2em;
+      }
+    }
+    img {
+      padding: 0.1rem;
+      width: 80vw;
+      height: 85vh;
+    }
+  }
 }
 
 @include mediaMd {
-	#about {
-		h1 {
-			font-size: 3em;
-		}
-	}
-	#projects {
-		.card-title {
-			display: flex;
-			font-size: 1.2em;
-			justify-content: space-between;
-		}
-		.skills {
-			display: flex;
-			justify-content: flex-start;
-		}
-		.card-action {
-			display: flex;
-			justify-content: center;
+  #about {
+    h1 {
+      font-size: 3em;
+    }
+  }
+  #projects {
+    .card-image {
+      height: 20rem;
+    }
+    .card-title {
+      display: flex;
+      font-size: 1.2em;
+      justify-content: space-between;
+    }
+    .skills {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .card-action {
+      display: flex;
+      justify-content: center;
 
-			i {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-		}
+      i {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
 
-		.skills {
-			font-size: .9em;
-		}
-	}
-	.resume {
-		h1 {
-			margin-top: 0;
-			font-size: 3em;
+    .skills {
+      font-size: 0.9em;
+    }
+  }
+  .resume {
+    h1 {
+      margin-top: 0;
+      font-size: 3em;
 
-			flex-flow: row;
-			span {
-				padding: .2em;
-			}
-		}
-		img {
-			width: 90vw;
-			height: 85vh;
-		}
-	}
-	main {
-		align-items: center;
-		text-align: center;
-		.lg-heading {
-			line-height: 1;
-			margin-bottom: 1rem;
-		}
-	}
-	ul.menu-nav,
-	div.menu-branding {
-		float: none;
-		width: 100%;
-		min-height: 0;
+      flex-flow: row;
+      span {
+        padding: 0.2em;
+      }
+    }
+    img {
+      width: 90vw;
+      height: 85vh;
+    }
+  }
+  main {
+    align-items: center;
+    text-align: center;
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
 
-		&.show {
-			transform: translate3d(0, 0, 0);
-		}
-	}
-	.menu-nav {
-		height: 75vh;
-		transform: translate3d(100%, 0, 0);
-		font-size: 24px;
-	}
-	.menu-branding {
-		height: 25vh;
-		transform: translate3d(-100%, 0, 0);
-		.portrait {
-			img {
-				width: 150px;
-				height: 150px;
-			}
-		}
-	}
-	.about-info {
-		grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-		grid-template-columns: 1fr;
-	}
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0);
+    .portrait {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+  }
 }
 
 @include mediaSm {
-	.menu .nav-link {
-		font-size: 1em;
-	}
-	.menu-branding .portrait img {
-		width: 100px;
-		height: 100px;
-	}
-	#contact {
-		h1 {
-			font-size: 2em;
-		}
-		h2 {
-			font-size: 1.2em;
-		}
-		.boxes {
-			margin-top: 50%;
-			div {
-				font-size: 1em;
-				padding: 1em;
-			}
-		}
-	}
+  .menu .nav-link {
+    font-size: 1em;
+  }
+  .menu-branding .portrait img {
+    width: 100px;
+    height: 100px;
+  }
+  #contact {
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    .boxes {
+      margin-top: 50%;
+      div {
+        font-size: 1em;
+        padding: 1em;
+      }
+    }
+  }
 
-	#projects {
-		.card-reveal p {
-			text-align: start;
-		}
-		h1 {
-			font-size: 2em;
-		}
-		h2 {
-			font-size: 1.5em;
-		}
-		.card-title {
-			font-size: 1.1em;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-		.skills {
-			display: flex;
-			justify-content: flex-start;
-			// width: 56vw;
-		}
-		.card-action {
-			display: flex;
-			text-align: center;
-			flex-direction: row-reverse;
-			align-items: center;
-			i {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-		}
-	}
+  #projects {
+    .card-image {
+      height: 15rem;
+    }
+    .card-reveal p {
+      text-align: start;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    .card-title {
+      font-size: 1.1em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .skills {
+      display: flex;
+      justify-content: flex-start;
+      // width: 56vw;
+    }
+    .card-action {
+      display: flex;
+      text-align: center;
+      flex-direction: row-reverse;
+      align-items: center;
+      i {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
 
-	main#home .stacks,
-	main#home .icons {
-		font-size: .9em;
-		width: 100%;
-		padding: .5em;
-	}
-	#home {
-		h1 {
-			font-size: 3.5em;
-		}
-	}
-	#about h1 {
-		font-size: 2em;
-	}
+  main#home .stacks,
+  main#home .icons {
+    font-size: 0.9em;
+    width: 100%;
+    padding: 0.5em;
+  }
+  #home {
+    h1 {
+      font-size: 3.5em;
+    }
+  }
+  #about h1 {
+    font-size: 2em;
+  }
 
-	.resume {
-		h1 {
-			font-size: 1.5em;
-			line-height: 0.2;
-			flex-flow: row;
-			span {
-				padding: .2em;
-			}
-		}
-		img {
-			width: 90vw;
-			height: 70vh;
-		}
-	}
+  .resume {
+    h1 {
+      font-size: 1.5em;
+      line-height: 0.2;
+      flex-flow: row;
+      span {
+        padding: 0.2em;
+      }
+    }
+    img {
+      width: 90vw;
+      height: 70vh;
+    }
+  }
 
-	main#home h1 {
-		margin-top: 10vh;
-	}
+  main#home h1 {
+    margin-top: 10vh;
+  }
 }
