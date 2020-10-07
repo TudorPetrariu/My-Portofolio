@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: flex-start;
-    font-size: 1.5em;
+    font-size: 1em;
   }
   #projects {
     .card-title {
@@ -22,6 +22,9 @@
     h2 {
       margin-bottom: 5%;
     }
+  }
+  .resume-image {
+    height: 90vh;
   }
 }
 
@@ -42,6 +45,8 @@
     }
   }
   .resume {
+    display: flex;
+    flex-direction: column;
     padding: 0.5rem;
 
     h1 {
@@ -94,6 +99,7 @@
       font-size: 0.9em;
     }
   }
+
   .resume {
     h1 {
       margin-top: 0;

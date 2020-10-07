@@ -141,9 +141,7 @@ main {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  .resume-image {
-    height: 80vh;
-  }
+
   h1 {
     display: flex;
     flex-direction: column;
@@ -179,7 +177,7 @@ main {
 .card {
   max-width: 35rem;
   img {
-    height: 25rem;
+    height: 15rem;
   }
   .skills {
     display: flex;
@@ -209,7 +207,7 @@ main {
   }
 }
 
-@for $x from 1 through 3 {
+@for $x from 1 through 4 {
   .animated:nth-child(#{$x}) {
     animation-delay: $x * 0.3s;
     animation-duration: $x * 1s;
